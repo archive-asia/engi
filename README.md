@@ -1,35 +1,27 @@
-# engi
-スキルシート管理プロジェクト
+# Engi
 
-## よく使うコマンド
+スキルシート管理アプリケーション
 
-### Railsのコンテナを起動してRailsのプロジェクトを作成するコマンド(初期のみ)
+_開発メモはwikiへ移動しました。_[[リンク]](https://github.com/archive-asia/engi/wiki/development-memo)
 
-`$ docker-compose run web rails new . --force --database=mysql`
+---
 
-### Railsイメージのビルド実行コマンド(gemfile 修正したときに)
-`$ docker-compose build`
+Things you may want to cover:
 
-### RailsのコンテナでDB作成のタスクを実行するコマンド(初期のみ)
-`$ docker-compose run web bundle exec rake db:create`
+* Ruby version
 
-### RailsのコンテナでDB構成変更のタスクを実行するコマンド
-`$ docker-compose run web bundle exec rake db:migrate`
+* System dependencies
 
-### コンテナをデタッチドモード（バックグラウンド）で実行するコマンド
-`$ docker-compose up -d`
+* Configuration
 
-### コンテナを停止、再起動するコマンド
-```
-$ docker-compose stop
-$ docker-compose down
-$ docker-compose restart
-```
-### コンテナステータス確認
-`$ docker-compose ps`
+* Database creation
 
-### コンテナを完全に落とす
-`$ docker-compose down -v`
+* Database initialization
 
-### Rail実行するときにprefix
-`$ docker-compose run web rails 〜 `
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
