@@ -1,0 +1,15 @@
+ja:
+  activerecord:
+    attributes:
+      company:
+        name: 会社名
+        address1: 住所１
+        address2: 住所２
+        homepage: ホームページ
+  views:
+    pagination:
+      first: 最初
+      last: 最後
+      previous: 前
+      next: 次
+      truncate: ...
