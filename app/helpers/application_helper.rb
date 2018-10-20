@@ -1,11 +1,10 @@
 module ApplicationHelper
-    # ページごとの完全なタイトルを返します。                   # コメント行
-  def full_title(page_title = '')                     # メソッド定義とオプション引数
-    base_title = "Ruby on Rails Tutorial Sample App"  # 変数への代入
-    if page_title.empty?                              # 論理値テスト
-      base_title                                      # 暗黙の戻り値
-    else 
-      page_title + " | " + base_title                 # 文字列の結合
+  def header_link_item(name, path)
+    class_name = 'nav-item'
+    class_name << ' active' if current_page?(path)
+
+    content_tag :li, class: class_name do
+      link_to name, path, class: 'nav-link'
     end
   end
 end
