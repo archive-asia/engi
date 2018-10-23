@@ -13,7 +13,7 @@
 #
 
 class Company < ApplicationRecord
-
+  has_many :users
   validates :name, presence: true, length: { maximum: 20 }
   validates :address1, presence: true, length: { maximum: 30 }
   validates :address2, presence: true, length: { maximum: 30 }

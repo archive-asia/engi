@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20181020085339) do
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "company_id"
     t.string   "login_name",      null: false
     t.string   "password_digest", null: false
     t.string   "name"
@@ -31,7 +32,9 @@ ActiveRecord::Schema.define(version: 20181020085339) do
     t.integer  "roles"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.index ["company_id"], name: "index_users_on_company_id", using: :btree
     t.index ["login_name"], name: "index_users_on_login_name", unique: true, using: :btree
   end
 
+  add_foreign_key "users", "companies"
 end
