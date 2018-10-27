@@ -1,7 +1,4 @@
 class UsersController < ApplicationController
-  def new
-    @user = User.new
-  end
 
   def new
     @user = User.new(flash[:user])
@@ -9,6 +6,7 @@ class UsersController < ApplicationController
 
   def create
     user = User.new(user_params)
+    # user.company = Company.find(1)
     if user.save
       session[:user_id] = user.id
       redirect_to mypage_path
@@ -21,6 +19,7 @@ class UsersController < ApplicationController
   end
 
   def me
+    # 本人のページ
   end
 
   private

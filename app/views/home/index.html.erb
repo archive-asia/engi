@@ -1,2 +1,9 @@
-<p>テストID:test/test1234</p>
+<h1>ログイン</h1>
+
+<div class="alert alert-info" role="alert">
+  <p>はじめにアプリを使う場合は下記のコマンドで初期データを作成してください。</p>
+  <p>docker-compose exec web bundle exec rake db:seed</p>
+  <p>テストID:test/test1234 </p>
+</div>
+
 <%= render partial: 'users/login_form' %>
